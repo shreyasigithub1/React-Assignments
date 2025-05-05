@@ -1,0 +1,181 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+/* For the whole ipod container */
+.ipod-container {
+  width: 350px;
+  height: 600px;
+  background-color: #1d2e3d;
+  padding:5px;
+  border-radius: 30px;
+}
+/*For the menu container*/
+.menu-container {
+  margin: 15px;
+  width: auto;
+  height: 48%;
+  border-radius: 5px;
+  display: flex;
+  background-color: #d4eaf7;
+  color: #00668c;
+}
+/* For the list of all the menu in the left side */
+.menu-list {
+  width: 60%;
+}
+/* For the image of the menu in the right side */
+.menu-image {
+  width: 50%;
+}
+/* Styling the image inside .menu-iamge */
+.menu-image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+/*ipod ytitle inside menu-list*/
+.ipod-title {
+  text-align: center;
+}
+/*Each item inside menu list*/
+.menu-listItem {
+  height: 18%;
+  text-align: center;
+  line-height: 50px;
+  position: relative;
+}
+
+/*each list item container*/
+.listItem-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+/*Inserting an arrow after when hovering*/
+.menu-container.listItem-container::after {
+  content: ">";
+  position: absolute;
+  right: -20px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.menu-container.listItem-container:hover::after {
+  right: 15px;
+  opacity: 1;
+}
+/*Styling for the wheel*/
+#wheel {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  margin: 40px auto;
+  background: #f9f9f9;
+  cursor: pointer;
+}
+
+.center-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: #ddd;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.menu-listItem.hovered {
+  background-color: #3e5975;
+  color: #cee8ff;
+  font-weight: bold;
+}
+
+.menu-listItem.hovered::after {
+  content: ">";
+  position: absolute;
+  right: 15px;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+/*when one item is selected*/
+.menu-listItem.selected {
+  background-color: #222;
+  color: white;
+}
+/*Wheel icons*/
+.icon {
+  position: absolute;
+  font-size: 25px;
+  color: #555;
+}
+
+.icon.top {
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+}
+
+.icon.bottom {
+  bottom: 10px;
+  left: 53%;
+  transform: translateX(-50%);
+}
+
+.icon.left {
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.icon.right {
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.icon.bottom img {
+  width: 20px;
+  height: 20px;
+}
+/*When any option is selected this will be shown*/
+.selected-screen {
+  background-color: #d4eaf7;
+  border-radius: 5px;
+  color: #00668c;
+  width: auto;
+  height: 45%;
+  margin:15px;
+
+  text-align: center;
+}
+
+/*Styling the item content*/
+
+.item-content {
+  font-size: 30px;
+  padding-top: 120px;
+  text-align: center;
+}
+.listItem-container img {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 10px;
+  right: 120px;
+}
+
+.full-screen {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}

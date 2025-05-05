@@ -1,0 +1,28 @@
+/* Write code for your CSS here */
+
+
+#hero p{
+font-size:25px;
+}
+
+#skill ul{
+    
+    display: flex;
+    gap:20px;
+    
+}
+#skill ul li{
+    list-style: none;
+    background-color: cyan;
+    width:100px;
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+#about{
+    width:50%;
+    font-size: 20px;
+}
